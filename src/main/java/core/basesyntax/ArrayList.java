@@ -15,7 +15,6 @@ public class ArrayList<T> implements List<T> {
         this.size = 0;
     }
 
-
     @Override
     public void add(T value) {
         validateCapacity();
@@ -80,7 +79,6 @@ public class ArrayList<T> implements List<T> {
     public boolean isEmpty() {
         return size() == 0;
     }
-
 
     private void validateCapacity() {
         if (size == elementData.length) {
