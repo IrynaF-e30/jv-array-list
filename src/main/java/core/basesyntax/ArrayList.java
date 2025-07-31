@@ -43,12 +43,11 @@ public class ArrayList<T> implements List<T> {
         return (T) elementData[index];
     }
 
+
     @Override
-    public T set(T value, int index) {
+    public void set(T value, int index) {
         checkIndex(index);
-        T oldValue = (T) elementData[index];
         elementData[index] = value;
-        return oldValue;
     }
 
     @Override
@@ -61,13 +60,13 @@ public class ArrayList<T> implements List<T> {
     }
 
     @Override
-    public T remove(T element) {
+    public T remove(T value) {
         for (int i = 0; i < size(); i++) {
-            if (Objects.equals(element, elementData[i])) {
+            if (Objects.equals(value, elementData[i])) {
                 return remove(i);
             }
         }
-        throw new NoSuchElementException("ELEMENT NOT FOUND" + element);
+        throw new NoSuchElementException("ELEMENT NOT FOUND" + value);
     }
 
     @Override
