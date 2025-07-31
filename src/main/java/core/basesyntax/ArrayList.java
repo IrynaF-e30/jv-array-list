@@ -43,7 +43,6 @@ public class ArrayList<T> implements List<T> {
         return (T) elementData[index];
     }
 
-
     @Override
     public void set(T value, int index) {
         checkIndex(index);
